@@ -167,6 +167,45 @@ Bevor ich eine Aussage mache über "was ich weiß", prüfe ich:
 
 ---
 
+## Installations-Regel (SICHERHEIT)
+
+**Dominik's Anweisung:** **VOR JEDER INSTALLATION** → **Kompatibilität prüfen**
+
+**Pflicht-Check vor Installation:**
+```bash
+# Automatisch ausgeführt durch:
+/opt/otto/bin/otto-check-install.sh "<package>" "<install-command>"
+```
+
+**Was geprüft wird:**
+1. **System-Typ** (OS, Architektur)
+2. **Abhängigkeiten** (Node, Python, Docker, etc.)
+3. **Konflikte** (bereits installiert? Version?)
+4. **Sicherheit** (rm -rf, sudo, chmod 777 blockiert)
+5. **Netzwerk** (Internet verfügbar?)
+6. **Speicher** (genug Platz?)
+
+**PEP 668 Handling:**
+- Python-Pakete: Check auf `externally-managed-environment`
+- Optionen: `--break-system-packages` vs venv vs pipx
+- **NIEMALS** automatisch `--break-system-packages`
+
+**Checker-Agent Approval:**
+Für Installationen > trivial → Checker muss freigeben
+
+**Beispiel-Workflow:**
+```
+User: "Installiere X"
+→ otto-check-install.sh prüft
+→ Falls OK: Checker approved
+→ Executor führt aus
+→ Auditor loggt
+```
+
+*Eingetragen: 2026-03-25 | VERBINDLICHE REGEL*
+
+---
+
 *Letzte Aktualisierung: 2026-03-25 | Self-Repair complete*
 
 ## Credentials Location
