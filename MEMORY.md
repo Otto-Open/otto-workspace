@@ -8,7 +8,17 @@
 - **Root:** `/opt/otto/`
 - **Workspace:** `/home/otto/.openclaw/workspace/`
 - **Erstellt:** 2026-03-23
-- **Status:** Operational (Phase B)
+- **Status:** Operational (Phase B) — Self-Repaired 2026-03-25
+
+## System-Health
+
+| Komponente | Status | Letzter Check |
+|------------|--------|---------------|
+| Task-System | ✅ Operational | 2026-03-25 |
+| Queue-Engine | ✅ Fixed | 2026-03-25 |
+| Executor v3.0 | ✅ Running | 2026-03-25 |
+| Memory V1+V2 | ✅ OK | 2026-03-25 |
+| Bridge | ✅ Synced | 2026-03-25 |
 
 ## Drei Modelle
 
@@ -19,6 +29,14 @@
 | nemotron-3-super:cloud | Executor/Agentic | Fallback 2 |
 
 ## Wichtige Learnings
+
+### LRN-20260325-001: Self-Repair Queue-System
+**Context:** Task-System hatte doppelte Queue-Verzeichnisse nach /new
+**Lesson:** Nach Session-Restart: Queue-Path konsistenz prüfen
+**Fix:** Symlink /opt/otto/queue → /opt/otto/tasks/queue
+**Applied:** 1x
+**Status:** active
+**Tags:** self-repair,task-system,paths
 
 ### ERR-20260323-001: Model API Keys
 - **Problem:** Fallback-Modelle brauchten API-Keys
@@ -62,4 +80,4 @@ Bevor ich eine Aussage mache über "was ich weiß", prüfe ich:
 
 ---
 
-*Letzte Aktualisierung: 2026-03-23*
+*Letzte Aktualisierung: 2026-03-25 | Self-Repair complete*

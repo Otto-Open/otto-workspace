@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "skills": {
+    "gw-self-heal": {
+      "version": "1.0.0",
+      "installedAt": 1774319302087
+    },
+    "gateway-auto-rollback": {
+      "version": "1.1.0",
+      "installedAt": 1774319305550
+    },
+    "self-monitor": {
+      "version": "1.0.1",
+      "installedAt": 1774319308507
+    },
+    "catbox-upload": {
+      "version": "1.0.0",
+      "installedAt": 1774320999226
+    }
+  }
+}
