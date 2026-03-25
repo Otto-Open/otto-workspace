@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-03-25T16:54:46+01:00",
+  "date": "2026-03-25",
+  "system": "Otto v2.0",
+  "summary": "Session ended with 0 pending, 0 approved, 0 running, 0 completed tasks. Git: 1 uncommitted changes on master.",
+  "tasks": {
+    "pending_approval": 0,
+    "approved_queue": 0,
+    "running": 0,
+    "completed": 0
+  },
+  "git": {
+    "branch": "master",
+    "uncommitted": 1
+  },
+  "recent_activity": "---\n\n## 📝 Neue Learnings\n\n**CORRECTION-20260325-002:** Task-System Verlust\n- Task verschwand spurlos aus Queue\n- Lesson: Robuste Task-Tracking mit WAL (Write-Ahead-Log) prüfen\n- Status: Documented for review\n\n---\n",
+  "never_forget": {
+    "identity": "Otto",
+    "system_root": "/opt/otto/",
+    "workspace": "/home/otto/.openclaw/workspace",
+    "memory_systems": ["V1 (.learnings/)", "V2 (~/self-improving/)"],
+    "sub_agents": ["checker", "executor", "auditor", "orchestrator"]
+  }
+}
