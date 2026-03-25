@@ -415,6 +415,28 @@ You are free to edit `HEARTBEAT.md` with a short checklist or reminders. Keep it
 - Commit and push your own changes
 - **Review and update MEMORY.md** (see below)
 
+### 💾 Automatic Backup (CRITICAL)
+
+**Am Ende jeder Session oder jedes Tages wird automatisch ein Backup erstellt:**
+
+**Manuell ausführen:**
+```bash
+/opt/otto/bin/otto-daily-backup.sh
+```
+
+**Was gesichert wird:**
+- ✅ Workspace (AGENTS.md, SOUL.md, MEMORY.md, alle Skills)
+- ✅ Otto System (/opt/otto/)
+- ✅ Self-Improving (V1+V2 Bridge)
+
+**Wohin:** https://github.com/Otto-Open/
+
+**Automatischer Schedule:**
+- Täglich: 23:00 Uhr (Europe/Berlin)
+- Bei Session-Ende: `otto-session-end-backup.sh`
+
+**Wichtig:** Das alte Backup wird überschrieben. GitHub enthält immer den neuesten Zustand.
+
 ### 🔄 Memory Maintenance (During Heartbeats)
 
 Periodically (every few days), use a heartbeat to:
