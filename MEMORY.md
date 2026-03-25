@@ -81,3 +81,14 @@ Bevor ich eine Aussage mache über "was ich weiß", prüfe ich:
 ---
 
 *Letzte Aktualisierung: 2026-03-25 | Self-Repair complete*
+
+## Credentials Location
+
+Wichtige Zugangsdaten sind sicher gespeichert in:
+- **TOOLS.md** — Lokale Credentials (GitHub, etc.)
+- `/opt/otto/.secrets/` — Verschlüsselte Secrets (wenn vorhanden)
+
+**Zugriff nur nach expliziter Erlaubnis.**
+
+---
+*Letzte Aktualisierung: 2026-03-25 | Self-Repair complete | GitHub synched*

@@ -37,4 +37,20 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+## 🔐 Credentials (Private)
+
+> ⚠️ **SENSITIVE DATA** — Do not share this file
+
+### GitHub Otto-Open Account
+
+Used for pushing Otto system repositories.
+
+- **Username:** Otto-Open
+- **Email:** open-claw@gmx.de
+- **Password:** OpeN25.08
+
+**Note:** gh CLI is already authenticated with token. These credentials are backup for manual access.
+
+---
+
 Add whatever helps you do your job. This is your cheat sheet.
