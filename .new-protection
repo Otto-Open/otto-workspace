@@ -1,0 +1,7 @@
+# NEW SESSION PROTECTION PROTOCOL
+# Diese Datei existiert, um zu signalisieren, dass das System initialisiert ist
+# Nach /new oder Session-Reset wird automatisch otto-auto-bootstrap.sh ausgeführt
+
+BOOTSTRAP_VERSION=2.0
+LAST_BOOTSTRAP=
+NEVER_FORGET_MODE=active
