@@ -450,6 +450,38 @@ Think of it like a human reviewing their journal and updating their mental model
 
 The goal: Be helpful without being annoying. Check in a few times a day, do useful background work, but respect quiet time.
 
+## Model Routing — VERBINDLICHE REGEL
+
+**Vor JEDEM Sub-Agent-Spawn: Aktives Modell wählen. NIE blind auf Default.**
+
+| Task-Typ | Modell | Warum |
+|----------|--------|-------|
+| Recherche, Daten sammeln, Zusammenfassung | **kimi** | Schnell, gute Context-Verarbeitung |
+| Architektur, Planung, UI/UX-Design, Code-Struktur | **minimax** | Besser bei komplexen Strukturen |
+| Tool-heavy, Code ausführen, Agentic-Tasks | **nemotron** | Bestes Tool-Calling, Code-Ausführung |
+| Einfache Standard-Aufgaben | **kimi** | Effizient |
+
+**Pflicht-Checkliste vor `sessions_spawn`:**
+1. Welcher Task-Typ ist das? (Recherche/Architektur/Ausführung)
+2. Welches Modell passt laut Tabelle?
+3. Explizit `model=` Parameter setzen
+
+**Verboten:**
+- ❌ `sessions_spawn` ohne `model=`
+- ❌ "kimi ist ja default, reicht schon"
+- ❌ Raten statt aktiv entscheiden
+
+**Beispiel (korrekt):**
+```javascript
+sessions_spawn({
+  task: "Baue Dashboard-Architektur",
+  model: "minimax-m2.7:cloud",  // ← EXPLIZIT!
+  runtime: "acp"
+})
+```
+
+*Eingetragen: 2026-03-26 | Dominik: "Er soll sie auch wirklich nutzen"*
+
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
