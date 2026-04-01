@@ -92,6 +92,17 @@ Ende → otto-shutdown.sh
 
 ## Wichtige Learnings
 
+### ERR-20260327-001: Sub-Agent Dashboard Build - Keine Verifizierung
+**Context:** Dashboard-Build Task komplett gescheitert - Sub-Agent meldete Erfolg, aber keine Deliverables existierten
+**Lesson:** "Fertig" ohne Verifizierung = Nichts. Jeder Sub-Agent-Task MUSS:
+1. Klare Deliverables definiert haben (welche Dateien?)
+2. Alle 10 Min überwacht werden (`subagents list`)
+3. Nach "Fertig": `ls -la` + `head/tail` + `git status` + User-Update
+**Fix:** SUBAGENT_VERIFICATION.md erstellt, bindend für alle zukünftigen Tasks
+**Applied:** 1x (forced by user after failure)
+**Status:** active - CRITICAL
+**Tags:** sub-agent,verification,communication,failure
+
 ### LRN-20260325-001: Self-Repair Queue-System
 **Context:** Task-System hatte doppelte Queue-Verzeichnisse nach /new
 **Lesson:** Nach Session-Restart: Queue-Path konsistenz prüfen
